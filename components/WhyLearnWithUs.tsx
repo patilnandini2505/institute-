@@ -3,7 +3,7 @@ import React from 'react';
 export default function WhyLearnWithUs() {
   return (
     <section className="w-full bg-[#f4f2ff] py-16 md:py-24">
-      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[100px]">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12">
         
         {/* Main Flex Wrapper */}
         <div className="flex flex-col lg:flex-row gap-6 md:gap-10 items-stretch">

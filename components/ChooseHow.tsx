@@ -3,7 +3,7 @@ import React from 'react';
 export default function ChooseHow() {
   return (
     <section className="w-full bg-[#f4f2ff] py-16">
-      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[100px]">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12">
         {/* Header */}
         <div className="flex flex-col items-start mb-12">
           <div 

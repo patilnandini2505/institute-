@@ -3,7 +3,7 @@ import React from 'react';
 export default function CourseSection() {
   return (
     <section className="w-full bg-[#f4f2ff] pb-16">
-      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[100px]">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12">
         
         {/* Purple Container */}
         <div className="bg-[#9b83e8] rounded-[24px] p-6 md:p-10 w-full shadow-sm">

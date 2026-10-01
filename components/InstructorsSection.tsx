@@ -3,7 +3,7 @@ import React from 'react';
 export default function InstructorsSection() {
   return (
     <section className="w-full bg-[#f4f2ff] pt-[160px] pb-16 md:pb-24">
-      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[100px]">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20">
           
           {/* Left Side: Images Grid */}

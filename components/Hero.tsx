@@ -8,14 +8,14 @@ export default function Hero() {
       <div 
         className="absolute top-0 left-0 w-full h-full z-[-1] bg-no-repeat pointer-events-none"
         style={{ 
-          backgroundImage: "url('/WhatsApp%20Image%202026-09-26%20at%2010.03.36%20AM.jpeg')",
+          backgroundImage: "url('/zb%20ugly%20bg.jpeg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 1
         }}
       ></div>
 
-      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[100px] relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 mt-[172px]">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-20 mt-[120px]">
         {/* Left Content */}
         <div className="flex flex-col items-start text-left space-y-5 w-full lg:w-auto shrink-0 z-20">
           <div 
@@ -113,18 +113,18 @@ export default function Hero() {
           `}</style>
 
           {/* The main container, maintaining a 1:1 aspect ratio and responsive scaling */}
-          <div className="relative w-[95vw] max-w-[750px] aspect-square flex items-center justify-center pointer-events-none">
+          <div className="relative w-[85vw] max-w-[580px] aspect-square flex items-center justify-center pointer-events-none">
             
             {/* Outer Orbit Path Removed */}
             
             {/* Outer Stroke Circle (Ellipse 33) */}
-            <img src="/Ellipse%2033.svg" alt="" className="absolute w-[82%] h-[82%] z-0 object-contain animate-[spin_40s_linear_infinite]" />
+            <img src="/Ellipse%2033.svg" alt="" className="absolute w-[82%] h-[82%] z-0 object-contain" />
             
             {/* Inner Solid Circle (Ellipse 34) */}
             <img src="/Ellipse%2034.svg" alt="" className="absolute w-[68%] h-[68%] z-10 object-contain shadow-[0_0_40px_rgba(206,241,0,0.15)]" />
 
             {/* Orbiting Spheres Container (Matched exactly to the 82% Green Ring) */}
-            <div className="absolute w-[82%] h-[82%] z-10 animate-[spin_40s_linear_infinite] rounded-full pointer-events-none">
+            <div className="absolute w-[82%] h-[82%] z-10 rounded-full pointer-events-none">
               {/* Top Left (135 deg) */}
               <div className="absolute top-[14.6%] left-[14.6%] -translate-x-1/2 -translate-y-1/2 w-3 h-3 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-[#CEF100] to-[#9cb800] shadow-[0_4px_10px_rgba(206,241,0,0.4)]"></div>
               {/* Bottom Left (225 deg) */}
@@ -142,7 +142,7 @@ export default function Hero() {
               <img 
                 src="/Ellipse%2022.svg" 
                 alt="Person Illustration" 
-                style={{ width: '371px', height: '423px' }}
+                style={{ width: '300px', height: '342px' }}
                 className="object-contain drop-shadow-2xl pointer-events-auto"
               />
             </div>
@@ -191,8 +191,8 @@ export default function Hero() {
       </div>
 
       {/* Stats Bar */}
-      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[100px] relative z-20 mt-[72px] mb-0">
-        <div className="bg-white rounded-[16px] px-[16px] py-6 md:py-0 w-full md:h-[104px] flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 shadow-[0_10px_40px_rgba(0,0,0,0.05)]">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12 relative z-20 mt-[72px] mb-0">
+        <div className="bg-white/40 backdrop-blur-lg border border-white/50 rounded-[16px] px-[16px] py-6 md:py-0 w-full md:h-[104px] flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 shadow-[0_10px_40px_rgba(0,0,0,0.05)]">
           {/* Stat 1 */}
           <div className="flex items-center space-x-4">
             <img 

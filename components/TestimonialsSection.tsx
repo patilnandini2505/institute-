@@ -41,7 +41,7 @@ export default function TestimonialsSection() {
 
   return (
     <section className="w-full bg-[#f4f2ff] py-16 md:py-24 overflow-hidden">
-      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[100px]">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12">
         {/* Header */}
         <div className="mb-16">
           <div className="border border-[#cbbcf6] text-gray-700 text-[10px] md:text-[11px] font-semibold tracking-widest uppercase rounded-full px-4 py-1.5 mb-6 inline-block bg-transparent">
