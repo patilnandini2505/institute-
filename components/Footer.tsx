@@ -2,39 +2,65 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#f4f2ff] pb-[80px] pt-12">
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12">
-        <div className="bg-[#9b83e8] rounded-[24px] p-10 md:p-14 flex flex-col lg:flex-row justify-between gap-12 items-center">
+    <footer className="w-full bg-[#f4f2ff] pt-12">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12 pb-16">
+        <div 
+          className="rounded-[24px] p-10 md:p-14 flex flex-col lg:flex-row justify-between gap-12 items-center bg-no-repeat bg-cover bg-center overflow-hidden shadow-sm"
+          style={{ 
+            backgroundImage: "url('/WhatsApp%20Image%202026-10-01%20at%204.28.39%20PM.jpeg')",
+          }}
+        >
           
           {/* Left Content */}
-          <div className="flex flex-col items-start text-white w-full lg:w-1/2">
-            <div className="border border-white/40 text-[10px] font-semibold tracking-widest uppercase rounded-full px-4 py-1.5 mb-6">
+          <div className="flex flex-col items-start w-full lg:w-1/2">
+            <div 
+              className="border border-white inline-flex items-center justify-center text-[11px] font-medium text-white tracking-wide uppercase rounded-full whitespace-nowrap px-4 py-1.5 h-[33px] mb-6"
+            >
               TAKE THE NEXT STEP
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+            <h2 
+              className="text-black mb-4"
+              style={{
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: 700,
+                fontSize: '36px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+              }}
+            >
               Take The First Step <br className="hidden md:block" />
-              Toward Your Dream Career.
+              Towards Your <span className="text-[#6419e6]">Dream Career.</span>
             </h2>
-            <p className="text-white/80 text-sm md:text-base mb-10 max-w-md leading-relaxed">
+            <p className="text-gray-700 text-sm md:text-base mb-10 max-w-md leading-relaxed font-medium">
               Leave your details and our team will help you choose the right program for your career goals.
             </p>
             
             <div className="space-y-6">
               <div>
-                <div className="flex items-center space-x-2 text-white/80 text-sm mb-1">
-                  <span>@</span>
+                <div className="flex items-center space-x-2 text-gray-700 text-sm mb-1 font-medium">
+                  <span className="text-base">@</span>
                   <span>Email ID</span>
                 </div>
-                <p className="text-lg font-semibold">zikrabyteinstitute@example.com</p>
+                <a 
+                  href="mailto:zikrabyteinstitute@example.com" 
+                  className="text-lg md:text-xl font-bold text-black hover:text-[#6419e6] transition-colors duration-200 inline-block"
+                >
+                  zikrabyteinstitute@example.com
+                </a>
               </div>
               <div>
-                <div className="flex items-center space-x-2 text-white/80 text-sm mb-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
+                <div className="flex items-center space-x-2 text-gray-700 text-sm mb-1 font-medium">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 text-gray-700">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.864-1.051l-3.215-.536a1.125 1.125 0 00-1.22.564l-1.25 2.5a13.08 13.08 0 01-6.702-6.702l2.5-1.25a1.125 1.125 0 00.564-1.22l-.536-3.215A1.125 1.125 0 0010.5 3.375h-1.372c-1.242 0-2.25 1.008-2.25 2.25z" />
                   </svg>
                   <span>Mobile Number</span>
                 </div>
-                <p className="text-lg font-semibold">+91 987 654 3210</p>
+                <a 
+                  href="tel:+919876543210" 
+                  className="text-lg md:text-xl font-bold text-black hover:text-[#6419e6] transition-colors duration-200 inline-block"
+                >
+                  +91 987 654 3210
+                </a>
               </div>
             </div>
           </div>
@@ -88,13 +114,74 @@ export default function Footer() {
 
               {/* Submit Button */}
               <div className="pt-2">
-                <button type="submit" className="bg-[#6419e6] text-white font-semibold py-3.5 px-8 rounded-full shadow-[0_8px_20px_rgba(100,25,230,0.35)] hover:scale-105 transition-transform text-sm">
-                  Submit Now
+                <button 
+                  type="submit" 
+                  className="bg-radial-brand text-white font-semibold py-3.5 px-8 rounded-full border-2 border-white shadow-[0_8px_20px_rgba(50,0,242,0.3)] text-sm btn-ripple-fill cursor-pointer"
+                >
+                  <span className="relative z-10">Submit Now</span>
                 </button>
               </div>
             </form>
           </div>
           
+        </div>
+      </div>
+
+      {/* Bottom Footer with zb2.jpeg background */}
+      <div 
+        className="w-full relative bg-no-repeat bg-cover bg-center min-h-[300px] md:min-h-[340px] flex flex-col justify-center pt-16 md:pt-20 pb-12 md:pb-14 overflow-hidden"
+        style={{ 
+          backgroundImage: "url('/zb2.jpeg')",
+        }}
+      >
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12">
+          {/* Quick Links Header */}
+          <div className="text-center mb-10">
+            <h4 
+              className="text-gray-900 mb-4 text-center"
+              style={{
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: 600,
+                fontSize: '20px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+                verticalAlign: 'middle',
+              }}
+            >
+              Quick Links
+            </h4>
+            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-12 text-[14px] md:text-[15px] text-gray-700 font-medium">
+              <a href="#" className="hover:text-[#6419e6] transition-colors">View All Courses</a>
+              <a href="#" className="hover:text-[#6419e6] transition-colors">Career Programs</a>
+              <a href="#" className="hover:text-[#6419e6] transition-colors">Success stories</a>
+            </div>
+          </div>
+
+          {/* Divider Line */}
+          <div className="w-full h-[1px] bg-gray-300/60 mb-8"></div>
+
+          {/* Bottom Row */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs md:text-[13px] text-gray-800 font-medium">
+            <div>
+              © 2026 ZikraByte. All rights reserved.
+            </div>
+
+            <div className="flex flex-wrap items-center gap-6 sm:gap-8">
+              <a href="mailto:zikrabyteinstitute@example.com" className="flex items-center gap-2 hover:text-[#6419e6] transition-colors group">
+                <svg className="w-4 h-4 text-black group-hover:text-[#6419e6] transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                <span>zikrabyteinstitute@example.com</span>
+              </a>
+              <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-[#6419e6] transition-colors group">
+                <svg className="w-4 h-4 text-black group-hover:text-[#6419e6] transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z" />
+                </svg>
+                <span>+91 987 654 3210</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

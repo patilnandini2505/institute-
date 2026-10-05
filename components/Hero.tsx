@@ -1,16 +1,43 @@
 import React from 'react';
 import Link from 'next/link';
 
+const stats = [
+  {
+    icon: "/Frame 5.svg",
+    alt: "Students Trained",
+    value: "100K+",
+    label: "Students Trained"
+  },
+  {
+    icon: "/Frame 5 (1).svg",
+    alt: "Programs / Courses",
+    value: "50+",
+    label: "Programs / Courses"
+  },
+  {
+    icon: "/Frame 5 (2).svg",
+    alt: "Industry Mentors",
+    value: "100+",
+    label: "Industry Mentors"
+  },
+  {
+    icon: "/Frame 5 (3).svg",
+    alt: "Career Outcomes",
+    value: "3K+",
+    label: "Career Outcomes"
+  },
+
+];
+
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[90vh] flex flex-col items-center bg-transparent overflow-hidden">
+    <section className="relative w-full min-h-[90vh] flex flex-col items-center bg-transparent overflow-hidden isolate">
       {/* Background Image / Waves Layer */}
-      <div 
-        className="absolute top-0 left-0 w-full h-full z-[-1] bg-no-repeat pointer-events-none"
-        style={{ 
-          backgroundImage: "url('/zb%20ugly%20bg.jpeg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+      <div
+        className="absolute top-0 left-0 w-full h-full z-0 bg-no-repeat bg-cover md:bg-[length:100%_auto] pointer-events-none"
+        style={{
+          backgroundImage: "url('/Frame%201618879378.svg')",
+          backgroundPosition: 'top center',
           opacity: 1
         }}
       ></div>
@@ -18,26 +45,21 @@ export default function Hero() {
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-20 mt-[120px]">
         {/* Left Content */}
         <div className="flex flex-col items-start text-left space-y-5 w-full lg:w-auto shrink-0 z-20">
-          <div 
-            className="border-[#d2c4f8] bg-[#e7dfff]/50 backdrop-blur-sm flex items-center justify-center text-[10px] font-bold text-[#5c428a] tracking-wider uppercase shadow-sm whitespace-nowrap"
-            style={{ 
-              width: '187px', 
-              height: '33px', 
-              gap: '10px', 
-              borderWidth: '1px', 
-              borderRadius: '40px', 
-              padding: '8px' 
+          <div
+            className="border-[#bfb2ea] bg-[#eff8d8] inline-flex items-center justify-center text-[11px] font-medium text-black tracking-wide uppercase rounded-full shadow-sm whitespace-nowrap px-4 py-1.5 h-[33px]"
+            style={{
+              borderWidth: '1px',
             }}
           >
-            MERN Stack Development
+            MERN STACK DEVELOPMENT
           </div>
 
-          <h1 
+          <h1
             className="w-full text-[#111] font-bold"
-            style={{ 
-              fontFamily: 'Inter, sans-serif', 
-              fontSize: 'clamp(32px, 4vw, 48px)', 
-              lineHeight: '1.2', 
+            style={{
+              fontFamily: 'Inter, sans-serif',
+              fontSize: 'clamp(32px, 4vw, 48px)',
+              lineHeight: '1.2',
               letterSpacing: '0%'
             }}
           >
@@ -45,12 +67,12 @@ export default function Hero() {
             <span className="text-[#6419e6]">Building Real Apps.</span>
           </h1>
 
-          <p 
+          <p
             className="w-full text-[#4B5563] font-medium"
-            style={{ 
-              fontFamily: 'Inter, sans-serif', 
-              fontSize: '16px', 
-              lineHeight: '24px', 
+            style={{
+              fontFamily: 'Inter, sans-serif',
+              fontSize: '16px',
+              lineHeight: '24px',
               letterSpacing: '0%'
             }}
           >
@@ -58,17 +80,17 @@ export default function Hero() {
             start your tech career.
           </p>
 
-          <div 
-            className="grid text-[#4B5563] py-2" 
-            style={{ 
+          <div
+            className="grid text-[#4B5563] py-2"
+            style={{
               gridTemplateColumns: 'max-content max-content',
               columnGap: '20px',
               rowGap: '12px',
-              fontFamily: 'Inter, sans-serif', 
-              fontWeight: 400, 
-              fontSize: '14px', 
-              lineHeight: '100%', 
-              letterSpacing: '0%' 
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 400,
+              fontSize: '14px',
+              lineHeight: '100%',
+              letterSpacing: '0%'
             }}
           >
             <div className="flex items-center space-x-2.5 whitespace-nowrap">
@@ -90,9 +112,9 @@ export default function Hero() {
           </div>
 
           <Link href="/courses" className="mt-4">
-            <button className="px-7 py-3.5 bg-[#7b2ff7] text-white font-semibold rounded-full shadow-[0_8px_20px_rgba(123,47,247,0.3)] hover:bg-[#6819e6] hover:shadow-[0_8px_25px_rgba(123,47,247,0.4)] transition-all flex items-center space-x-2 group">
-              <span>View Course Details</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 group-hover:translate-x-1 transition-transform">
+            <button className="px-7 py-3.5 bg-radial-brand text-white font-semibold rounded-full border-2 border-white shadow-[0_8px_20px_rgba(50,0,242,0.3)] flex items-center space-x-2 btn-ripple-fill cursor-pointer">
+              <span className="relative z-10">View Course Details</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4 relative z-10">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
             </button>
@@ -100,7 +122,7 @@ export default function Hero() {
         </div>
 
         {/* Right Graphic Area */}
-        <div className="w-full lg:w-[50%] flex justify-center relative mt-16 lg:mt-0 shrink-0">
+        <div className="w-full lg:w-[50%] flex justify-center lg:justify-end relative mt-16 lg:mt-0 shrink-0">
           <style>{`
             @keyframes float-icon {
               0%, 100% { transform: translate(-50%, -50%) translateY(0); }
@@ -113,18 +135,19 @@ export default function Hero() {
           `}</style>
 
           {/* The main container, maintaining a 1:1 aspect ratio and responsive scaling */}
-          <div className="relative w-[85vw] max-w-[580px] aspect-square flex items-center justify-center pointer-events-none">
-            
-            {/* Outer Orbit Path Removed */}
-            
-            {/* Outer Stroke Circle (Ellipse 33) */}
-            <img src="/Ellipse%2033.svg" alt="" className="absolute w-[82%] h-[82%] z-0 object-contain" />
-            
-            {/* Inner Solid Circle (Ellipse 34) */}
-            <img src="/Ellipse%2034.svg" alt="" className="absolute w-[68%] h-[68%] z-10 object-contain shadow-[0_0_40px_rgba(206,241,0,0.15)]" />
+          <div className="relative w-[85vw] max-w-[500px] aspect-square flex items-center justify-center pointer-events-none">
 
-            {/* Orbiting Spheres Container (Matched exactly to the 82% Green Ring) */}
-            <div className="absolute w-[82%] h-[82%] z-10 rounded-full pointer-events-none">
+            {/* Outer Orbit Path Removed */}
+
+            {/* Outer Stroke Circle (Ellipse 33) */}
+            <img src="/Ellipse%2022.svg" alt="" className="hidden" /> {/* preloader */}
+            <img src="/Ellipse%2033.svg" alt="" className="absolute w-[76%] h-[76%] z-0 object-contain" />
+
+            {/* Inner Solid Circle (Ellipse 34) */}
+            <img src="/Ellipse%2034.svg" alt="" className="absolute w-[64%] h-[64%] z-10 object-contain shadow-[0_0_40px_rgba(206,241,0,0.15)]" />
+
+            {/* Orbiting Spheres Container */}
+            <div className="absolute w-[76%] h-[76%] z-10 rounded-full pointer-events-none">
               {/* Top Left (135 deg) */}
               <div className="absolute top-[14.6%] left-[14.6%] -translate-x-1/2 -translate-y-1/2 w-3 h-3 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-[#CEF100] to-[#9cb800] shadow-[0_4px_10px_rgba(206,241,0,0.4)]"></div>
               {/* Bottom Left (225 deg) */}
@@ -137,24 +160,38 @@ export default function Hero() {
               <div className="absolute top-[14.6%] left-[85.4%] -translate-x-1/2 -translate-y-1/2 w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gradient-to-br from-[#CEF100] to-[#9cb800] shadow-[0_4px_10px_rgba(206,241,0,0.4)]"></div>
             </div>
 
-            {/* Person Cutout */}
-            <div className="absolute bottom-[16%] left-0 right-0 z-20 flex justify-center pointer-events-none">
-              <img 
-                src="/Ellipse%2022.svg" 
-                alt="Person Illustration" 
-                style={{ width: '300px', height: '342px' }}
-                className="object-contain drop-shadow-2xl pointer-events-auto"
+            {/* Person Cutout - Layer 1: Bottom body clipped precisely to the circle circumference */}
+            <div
+              className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none"
+              style={{ clipPath: 'circle(31.8% at 50% 50%)' }}
+            >
+              <img
+                src="/Ellipse%2022.svg"
+                alt="Person Illustration"
+                className="w-[370px] h-[425px] object-contain drop-shadow-2xl translate-y-[-25px] pointer-events-auto"
               />
             </div>
 
-            {/* Static Floating Icons (z-30) - Wrapped in 82% container to match green ring perfectly */}
-            <div className="absolute w-[82%] h-[82%] z-30 pointer-events-none">
-              
+            {/* Person Cutout - Layer 2: Head & laptop popping out of the box at the top */}
+            <div
+              className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none"
+              style={{ clipPath: 'polygon(-50% -100%, 150% -100%, 150% 50%, -50% 50%)' }}
+            >
+              <img
+                src="/Ellipse%2022.svg"
+                alt=""
+                className="w-[370px] h-[425px] object-contain drop-shadow-2xl translate-y-[-25px] pointer-events-auto"
+              />
+            </div>
+
+            {/* Static Floating Icons (z-30) - Wrapped in 76% container to match green ring perfectly */}
+            <div className="absolute w-[76%] h-[76%] z-30 pointer-events-none">
+
               {/* NPM */}
               <div className="absolute top-[3.3%] left-[33%] -translate-x-1/2 -translate-y-1/2 pointer-events-auto">
                 <div className="w-[48px] h-[48px] bg-white rounded-[40px] flex items-center justify-center overflow-hidden">
                   <svg className="w-[150%] h-[150%]" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21.6 28.9355V36.9358H28.2637V38.264H33.6V36.9358H45.6V28.9355H21.6ZM28.2637 35.5955H26.9355V31.5958H25.5997V35.5955H22.9357V30.2675H28.2637V35.5955ZM32.2642 35.5955V36.9358H29.6002V30.2675H34.9365V35.5993H32.2642V35.5955ZM44.268 35.5955H42.936V31.5958H41.6002V35.5955H40.2645V31.5958H38.9362V35.5955H36.264V30.2675H44.268V35.5955ZM32.2642 31.5995H33.6V34.2673H32.2642V31.5995Z" fill="black"/>
+                    <path d="M21.6 28.9355V36.9358H28.2637V38.264H33.6V36.9358H45.6V28.9355H21.6ZM28.2637 35.5955H26.9355V31.5958H25.5997V35.5955H22.9357V30.2675H28.2637V35.5955ZM32.2642 35.5955V36.9358H29.6002V30.2675H34.9365V35.5993H32.2642V35.5955ZM44.268 35.5955H42.936V31.5958H41.6002V35.5955H40.2645V31.5958H38.9362V35.5955H36.264V30.2675H44.268V35.5955ZM32.2642 31.5995H33.6V34.2673H32.2642V31.5995Z" fill="black" />
                   </svg>
                 </div>
               </div>
@@ -191,79 +228,44 @@ export default function Hero() {
       </div>
 
       {/* Stats Bar */}
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12 relative z-20 mt-[72px] mb-0">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12 relative z-20 mt-6 mb-0">
         <div className="bg-white/40 backdrop-blur-lg border border-white/50 rounded-[16px] px-[16px] py-6 md:py-0 w-full md:h-[104px] flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0 shadow-[0_10px_40px_rgba(0,0,0,0.05)]">
-          {/* Stat 1 */}
-          <div className="flex items-center space-x-4">
-            <img 
-              src="/Frame 5.svg" 
-              alt="Students Trained" 
-              className="w-14 h-14 object-contain shadow-md rounded-full" 
-            />
-            <div>
-              <h3 className="text-[1.7rem] font-extrabold text-gray-900 leading-none">100K+</h3>
-              <p className="text-gray-500 text-sm font-medium mt-1">Students Trained</p>
+          {stats.map((stat, index) => (
+            <div key={index} className="flex items-center space-x-4">
+              <img
+                src={stat.icon}
+                alt={stat.alt}
+                className="w-14 h-14 object-contain shadow-md rounded-full"
+              />
+              <div>
+                <h3 className="text-[1.7rem] font-semibold text-gray-900 leading-none">
+                  {stat.value}
+                </h3>
+                <p className="text-gray-500 text-sm font-medium mt-1">{stat.label}</p>
+              </div>
             </div>
-          </div>
-
-          {/* Stat 2 */}
-          <div className="flex items-center space-x-4">
-            <img 
-              src="/Frame 5 (1).svg" 
-              alt="Programs / Courses" 
-              className="w-14 h-14 object-contain shadow-md rounded-full" 
-            />
-            <div>
-              <h3 className="text-[1.7rem] font-extrabold text-gray-900 leading-none">50+</h3>
-              <p className="text-gray-500 text-sm font-medium mt-1">Programs / Courses</p>
-            </div>
-          </div>
-
-          {/* Stat 3 */}
-          <div className="flex items-center space-x-4">
-            <img 
-              src="/Frame 5 (2).svg" 
-              alt="Industry Mentors" 
-              className="w-14 h-14 object-contain shadow-md rounded-full" 
-            />
-            <div>
-              <h3 className="text-[1.7rem] font-extrabold text-gray-900 leading-none">100+</h3>
-              <p className="text-gray-500 text-sm font-medium mt-1">Industry Mentors</p>
-            </div>
-          </div>
-
-          {/* Stat 4 */}
-          <div className="flex items-center space-x-4">
-            <img 
-              src="/Frame 5 (3).svg" 
-              alt="Career Outcomes" 
-              className="w-14 h-14 object-contain shadow-md rounded-full" 
-            />
-            <div>
-              <h3 className="text-[1.7rem] font-extrabold text-gray-900 leading-none">3K+</h3>
-              <p className="text-gray-500 text-sm font-medium mt-1">Career Outcomes</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
+      {/* Soft gradient fade from hero background into white section */}
+      <div className="w-full h-24 md:h-36 bg-gradient-to-b from-transparent to-white relative z-20 pointer-events-none -mb-1 mt-4 md:mt-6" />
+
       {/* Companies Section */}
-      <div className="w-full flex flex-col items-center mt-[46px] bg-white relative z-20 px-6 py-12">
-        <div 
-          className="border-[#d2c4f8] bg-[#e7dfff]/50 backdrop-blur-sm inline-flex items-center justify-center text-[10px] font-bold text-[#5c428a] tracking-wider uppercase shadow-sm whitespace-nowrap mb-6"
-          style={{ 
-            borderWidth: '1px', 
-            borderRadius: '40px', 
-            padding: '8px 16px' 
+      <div className="w-full flex flex-col items-center relative z-20 px-6 pt-6 pb-24 bg-white">
+        <div
+          className="border-[#bfb2ea] bg-[#eff8d8] inline-flex items-center justify-center text-[11px] font-medium text-black tracking-wide uppercase rounded-full shadow-sm whitespace-nowrap px-4 py-1.5 h-[33px] mb-6"
+          style={{
+            borderWidth: '1px',
           }}
         >
           WHERE OUR LEARNERS ARE GROWING
         </div>
-        
-        <h2 
+
+        <h2
           className="text-[#111] font-bold text-center mb-12"
-          style={{ 
-            fontFamily: 'Inter, sans-serif', 
+          style={{
+            fontFamily: 'Inter, sans-serif',
             fontSize: 'clamp(24px, 3vw, 36px)',
             lineHeight: '1.2'
           }}
@@ -291,13 +293,13 @@ export default function Hero() {
       </div>
 
       {/* Floating WhatsApp Button */}
-      <a 
-        href="#" 
+      <a
+        href="#"
         className="fixed bottom-8 right-8 z-50 w-[60px] h-[60px] bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform cursor-pointer"
         aria-label="WhatsApp"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" className="w-8 h-8">
-           <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.1-115-65.1-157zM223.9 413.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+          <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.1-115-65.1-157zM223.9 413.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
         </svg>
       </a>
     </section>

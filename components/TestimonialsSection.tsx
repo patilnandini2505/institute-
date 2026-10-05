@@ -40,97 +40,112 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section className="w-full bg-[#f4f2ff] py-16 md:py-24 overflow-hidden">
+    <section className="w-full bg-[#f4f2ff] py-16 md:py-24">
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12">
         {/* Header */}
-        <div className="mb-16">
-          <div className="border border-[#cbbcf6] text-gray-700 text-[10px] md:text-[11px] font-semibold tracking-widest uppercase rounded-full px-4 py-1.5 mb-6 inline-block bg-transparent">
+        <div className="mb-10 md:mb-12">
+          <div 
+            className="border-[#bfb2ea] bg-[#eff8d8] inline-flex items-center justify-center text-[11px] font-medium text-black tracking-wide uppercase rounded-full shadow-sm whitespace-nowrap px-4 py-1.5 h-[33px] mb-6"
+            style={{ borderWidth: '1px' }}
+          >
             TESTIMONIALS
           </div>
-          <h2 className="text-3xl md:text-[40px] font-extrabold text-black leading-tight tracking-tight">
+          <h2 
+            className="text-black"
+            style={{
+              fontFamily: 'Inter, sans-serif',
+              fontWeight: 700,
+              fontSize: '36px',
+              lineHeight: '100%',
+              letterSpacing: '0%',
+            }}
+          >
             Don't Just Take Our Word For It.
           </h2>
         </div>
 
-        {/* Slider Area */}
-        <div className="relative h-[250px] md:h-[280px] w-full flex items-center justify-center">
-          {testimonials.map((testimonial, index) => {
-            // Calculate relative position based on 3 items looping
-            let position = "hidden";
-            let zIndex = 0;
-            let transform = "";
-            let opacity = "";
-            let bgClass = "";
-            
-            if (index === activeIndex) {
-              position = "center";
-              zIndex = 20;
-              transform = "translateX(0) scale(1)";
-              opacity = "opacity-100 shadow-[0_12px_40px_rgba(0,0,0,0.06)]";
-              bgClass = "bg-white";
-            } else if (index === (activeIndex - 1 + testimonials.length) % testimonials.length) {
-              position = "left";
-              zIndex = 10;
-              transform = "translateX(-105%) scale(0.9)";
-              opacity = "opacity-40";
-              bgClass = "bg-white/80";
-            } else if (index === (activeIndex + 1) % testimonials.length) {
-              position = "right";
-              zIndex = 10;
-              transform = "translateX(105%) scale(0.9)";
-              opacity = "opacity-40";
-              bgClass = "bg-white/80";
-            }
+        {/* Slider Area - Clipped to the container margin to align with navbar SVG */}
+        <div className="relative w-full overflow-hidden py-4">
+          <div className="relative h-[220px] md:h-[240px] w-full flex items-center justify-center">
+            {testimonials.map((testimonial, index) => {
+              let zIndex = 0;
+              let transform = "translateX(0) scale(0.85)";
+              let opacity = "opacity-0 pointer-events-none";
+              let bgClass = "bg-white/80";
+              let isCenter = false;
 
-            return (
-              <div
-                key={testimonial.id}
-                className={`absolute w-full max-w-[320px] md:max-w-[480px] h-[220px] md:h-[240px] transition-all duration-500 ease-in-out rounded-[20px] p-8 md:p-10 flex flex-col justify-between ${opacity} ${bgClass}`}
-                style={{
-                  transform,
-                  zIndex,
-                }}
-              >
-                <div>
-                  {/* Quote Icon */}
-                  <div className="text-2xl font-serif text-black mb-4 leading-none italic font-bold">“</div>
+              if (index === activeIndex) {
+                zIndex = 20;
+                transform = "translateX(0) scale(1)";
+                opacity = "opacity-100 shadow-[0_12px_40px_rgba(0,0,0,0.06)]";
+                bgClass = "bg-white";
+                isCenter = true;
+              } else if (index === (activeIndex - 1 + testimonials.length) % testimonials.length) {
+                zIndex = 10;
+                transform = "translateX(calc(-100% - 20px)) scale(0.9)";
+                opacity = "opacity-40";
+                bgClass = "bg-white/80";
+              } else if (index === (activeIndex + 1) % testimonials.length) {
+                zIndex = 10;
+                transform = "translateX(calc(100% + 20px)) scale(0.9)";
+                opacity = "opacity-40";
+                bgClass = "bg-white/80";
+              }
+
+              return (
+                <div
+                  key={testimonial.id}
+                  onClick={() => setActiveIndex(index)}
+                  className={`absolute w-[320px] sm:w-[360px] md:w-[420px] lg:w-[460px] h-[190px] md:h-[210px] transition-all duration-500 ease-in-out rounded-[20px] p-6 md:p-8 flex flex-col justify-between cursor-pointer ${opacity} ${bgClass}`}
+                  style={{
+                    transform,
+                    zIndex,
+                  }}
+                >
+                  <div>
+                    {/* Quote Icon */}
+                    <div className="text-2xl font-serif text-black mb-3 leading-none italic font-bold">“</div>
+                    
+                    {/* Text */}
+                    <p className={`text-[14px] md:text-[16px] leading-relaxed font-semibold ${isCenter ? 'text-black' : 'text-gray-700'}`}>
+                      {testimonial.text}
+                    </p>
+                  </div>
                   
-                  {/* Text */}
-                  <p className={`text-[15px] md:text-[17px] leading-relaxed font-semibold ${index === activeIndex ? 'text-black' : 'text-gray-700'}`}>
-                    {testimonial.text}
-                  </p>
+                  <div>
+                    {/* Divider */}
+                    <div className="w-full h-[1px] bg-gray-100 mb-3"></div>
+                    
+                    {/* Author */}
+                    <p className={`text-sm font-medium ${isCenter ? 'text-gray-600' : 'text-gray-400'}`}>
+                      {testimonial.author}
+                    </p>
+                  </div>
                 </div>
-                
-                <div>
-                  {/* Divider */}
-                  <div className="w-full h-[1px] bg-gray-100 mb-5"></div>
-                  
-                  {/* Author */}
-                  <p className="text-sm md:text-[15px] text-gray-500 font-medium">
-                    {testimonial.author}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-center items-center gap-4 mt-8 md:mt-12">
+        <div className="flex justify-center items-center gap-3.5 mt-6 md:mt-8">
           <button 
             onClick={handlePrev}
-            className="w-12 h-12 rounded-full border border-[#7C3AED] flex items-center justify-center text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white transition-colors"
+            className="w-9 h-9 rounded-full border border-[#7C3AED] flex items-center justify-center text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white transition-colors shadow-sm"
+            aria-label="Previous testimonial"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
+
           <button 
             onClick={handleNext}
-            className="w-12 h-12 rounded-full border border-[#7C3AED] flex items-center justify-center text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white transition-colors"
+            className="w-9 h-9 rounded-full border border-[#7C3AED] flex items-center justify-center text-[#7C3AED] hover:bg-[#7C3AED] hover:text-white transition-colors shadow-sm"
+            aria-label="Next testimonial"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
         </div>

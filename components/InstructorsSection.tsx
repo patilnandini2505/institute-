@@ -2,7 +2,12 @@ import React from 'react';
 
 export default function InstructorsSection() {
   return (
-    <section className="w-full bg-[#f4f2ff] pt-[160px] pb-16 md:pb-24">
+    <section 
+      className="w-full relative min-h-[432px] md:h-[432px] flex items-center py-12 md:py-0 bg-no-repeat bg-cover bg-center overflow-hidden"
+      style={{ 
+        backgroundImage: "url('/zb2.jpeg')",
+      }}
+    >
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20">
           
@@ -35,14 +40,26 @@ export default function InstructorsSection() {
             </div>
           </div>
 
-          {/* Right Side: Text Content */}
           <div className="w-full md:w-[50%] pr-0 md:pr-10">
-            <div className="border border-[#cbbcf6] text-gray-700 text-[10px] md:text-[11px] font-semibold tracking-widest uppercase rounded-full px-4 py-1.5 mb-6 inline-block bg-transparent">
+            <div 
+              className="border-[#bfb2ea] bg-[#eff8d8] inline-flex items-center justify-center text-[11px] font-medium text-black tracking-wide uppercase rounded-full shadow-sm whitespace-nowrap px-4 py-1.5 h-[33px] mb-6"
+              style={{ borderWidth: '1px' }}
+            >
               LEARN FROM PEOPLE WHO'VE DONE IT
             </div>
             
-            <h2 className="text-[36px] md:text-[44px] lg:text-[48px] font-extrabold text-black leading-[1.1] mb-6 tracking-tight">
-              Real <span className="text-[#6C5CE7]">Experience.</span> Practical <br className="hidden md:block"/>
+            <h2 
+              className="text-black mb-6"
+              style={{
+                fontFamily: 'Inter, sans-serif',
+                fontWeight: 700,
+                fontSize: '36px',
+                lineHeight: '100%',
+                letterSpacing: '0%',
+              }}
+            >
+              <span className="whitespace-nowrap">Real <span className="text-[#6C5CE7]">Experience.</span> Practical</span>
+              <br />
               <span className="text-[#6C5CE7]">Guidance.</span>
             </h2>
             
