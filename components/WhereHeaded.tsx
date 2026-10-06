@@ -57,7 +57,7 @@ export default function WhereHeaded() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-3 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col h-full group"
+              className="bg-white rounded-2xl p-3 card-hover-shadow flex flex-col h-full group"
             >
               <div className="w-full aspect-[4/3] rounded-xl overflow-hidden mb-5">
                 <img

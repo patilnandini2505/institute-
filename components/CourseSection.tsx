@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function CourseSection() {
   return (
@@ -26,8 +27,8 @@ export default function CourseSection() {
               </h2>
             </div>
 
-            <button className="mt-6 md:mt-0 bg-white text-gray-900 px-6 py-3.5 rounded-full font-bold text-sm flex items-center gap-2 shadow-sm hover:shadow-md transition-all">
-              Explore all Courses
+            <button className="mt-6 md:mt-0 px-6 py-3.5 rounded-full font-bold text-sm flex items-center gap-2 btn-white-to-purple">
+              <span>Explore all Courses</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -38,7 +39,7 @@ export default function CourseSection() {
           <div className="bg-[#fbfaf8] rounded-[24px] p-4 md:p-6 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 shadow-inner">
 
             {/* Card 1 */}
-            <div className="bg-white rounded-[16px] p-4 flex flex-col shadow-sm border border-gray-50">
+            <div className="bg-white rounded-[16px] p-4 flex flex-col shadow-sm border border-gray-50 group">
               <div className="rounded-[16px] overflow-hidden aspect-[4/3] mb-5">
                 <img src="/24f3cd1739b6a935fd0cb906008a8c87895909bb.jpg" alt="Python Full Stack" className="w-full h-full object-cover" />
               </div>
@@ -59,17 +60,17 @@ export default function CourseSection() {
               </div>
 
               <div className="mt-auto border-t border-gray-100 pt-4 px-1">
-                <a href="#" className="text-[#6C5CE7] text-sm font-semibold flex items-center gap-1 hover:opacity-80 transition-opacity">
-                  Talk to our advisor
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <Link href="#" className="text-[#6C5CE7] text-sm font-semibold flex items-center group/link w-fit">
+                  <span className="decoration-[#6C5CE7] group-hover:underline group-hover/link:underline underline-offset-[3px]">Talk to our advisor</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 ml-1.5 transition-transform duration-200 group-hover:translate-x-1.5 group-hover/link:translate-x-1.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white rounded-[16px] p-4 flex flex-col shadow-sm border border-gray-50">
+            <div className="bg-white rounded-[16px] p-4 flex flex-col shadow-sm border border-gray-50 group">
               <div className="rounded-[16px] overflow-hidden aspect-[4/3] mb-5">
                 <img src="/47887a85762a6c3c483c504d20c3fc500f04752c.jpg" alt="Java Full Stack" className="w-full h-full object-cover" />
               </div>
@@ -90,17 +91,17 @@ export default function CourseSection() {
               </div>
 
               <div className="mt-auto border-t border-gray-100 pt-4 px-1">
-                <a href="#" className="text-[#6C5CE7] text-sm font-semibold flex items-center gap-1 hover:opacity-80 transition-opacity">
-                  Talk to our advisor
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <Link href="#" className="text-[#6C5CE7] text-sm font-semibold flex items-center group/link w-fit">
+                  <span className="decoration-[#6C5CE7] group-hover:underline group-hover/link:underline underline-offset-[3px]">Talk to our advisor</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 ml-1.5 transition-transform duration-200 group-hover:translate-x-1.5 group-hover/link:translate-x-1.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white rounded-[16px] p-4 flex flex-col shadow-sm border border-gray-50">
+            <div className="bg-white rounded-[16px] p-4 flex flex-col shadow-sm border border-gray-50 group">
               <div className="rounded-[16px] overflow-hidden aspect-[4/3] mb-5">
                 <img src="/33f8271c21ace79aec6d42fed63426a053663a5e.jpg" alt="UI/UX Design" className="w-full h-full object-cover" />
               </div>
@@ -120,12 +121,12 @@ export default function CourseSection() {
               </div>
 
               <div className="mt-auto border-t border-gray-100 pt-4 px-1">
-                <a href="#" className="text-[#6C5CE7] text-sm font-semibold flex items-center gap-1 hover:opacity-80 transition-opacity">
-                  Talk to our advisor
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <Link href="#" className="text-[#6C5CE7] text-sm font-semibold flex items-center group/link w-fit">
+                  <span className="decoration-[#6C5CE7] group-hover:underline group-hover/link:underline underline-offset-[3px]">Talk to our advisor</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 ml-1.5 transition-transform duration-200 group-hover:translate-x-1.5 group-hover/link:translate-x-1.5">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -185,8 +186,8 @@ export default function CourseSection() {
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
-                <button className="bg-transparent border border-[#7C3AED] text-[#7C3AED] px-6 py-3 rounded-full font-semibold text-sm hover:bg-purple-50 transition-colors">
-                  Talk to Advisor
+                <button className="px-6 py-3 rounded-full font-semibold text-sm btn-outline-to-purple">
+                  <span>Talk to Advisor</span>
                 </button>
               </div>
             </div>

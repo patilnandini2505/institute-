@@ -35,7 +35,7 @@ body {
   background: #5C35F2;
   border-radius: 9999px;
   clip-path: circle(0% at 50% 120%);
-  transition: clip-path 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: clip-path 700ms cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
   z-index: 1;
 }
@@ -49,7 +49,7 @@ body {
   position: relative;
   z-index: 2;
   color: #ffffff;
-  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-ripple-fill:hover span {
@@ -60,5 +60,109 @@ body {
   color: #ffffff;
   transform: translateX(5px);
 }
+
+.card-hover-shadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-shadow:hover {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.btn-white-to-purple {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-white-to-purple::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #5C35F2;
+  border-radius: 9999px;
+  clip-path: circle(0% at 50% 120%);
+  transition: clip-path 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btn-white-to-purple:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(92, 53, 242, 0.15);
+}
+
+.btn-white-to-purple:hover::before {
+  clip-path: circle(240% at 50% 100%);
+}
+
+.btn-white-to-purple span,
+.btn-white-to-purple svg {
+  position: relative;
+  z-index: 2;
+  color: #111827;
+  transition: color 400ms ease, transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-white-to-purple:hover span {
+  color: #ffffff;
+}
+
+.btn-white-to-purple:hover svg {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.btn-outline-to-purple {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #7C3AED;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1), border-color 400ms ease;
+}
+
+.btn-outline-to-purple::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #5C35F2;
+  border-radius: 9999px;
+  clip-path: circle(0% at 50% 120%);
+  transition: clip-path 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btn-outline-to-purple:hover {
+  border-color: #5C35F2;
+  box-shadow: 0 10px 25px rgba(92, 53, 242, 0.25), 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.btn-outline-to-purple:hover::before {
+  clip-path: circle(240% at 50% 100%);
+}
+
+.btn-outline-to-purple span,
+.btn-outline-to-purple svg {
+  position: relative;
+  z-index: 2;
+  color: #7C3AED;
+  transition: color 400ms ease, transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-outline-to-purple:hover span {
+  color: #ffffff;
+}
+
+.btn-outline-to-purple:hover svg {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
 
 
