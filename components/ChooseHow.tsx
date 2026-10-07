@@ -14,7 +14,10 @@ export default function ChooseHow() {
           >
             LEARN YOUR WAY
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#111]">
+          <h2 
+            className="text-3xl md:text-4xl font-bold text-[#111] leading-tight"
+            style={{ fontFamily: 'Inter, sans-serif' }}
+          >
             Choose How You Want <span className="text-[#6419e6]">To Learn</span>
           </h2>
         </div>

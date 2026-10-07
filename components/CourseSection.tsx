@@ -15,14 +15,17 @@ export default function CourseSection() {
         >
 
           {/* Header */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 pl-2 md:pl-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 pl-0 md:pl-4">
             <div>
               <div
                 className="border border-white inline-flex items-center justify-center text-[11px] font-medium text-white tracking-wide uppercase rounded-full whitespace-nowrap px-4 py-1.5 h-[33px] mb-4"
               >
                 RECOMMENDED FOR YOU
               </div>
-              <h2 className="text-3xl md:text-[36px] font-bold text-white leading-tight max-w-[600px]">
+              <h2 
+                className="text-3xl md:text-[36px] font-bold text-white leading-tight max-w-[600px]"
+                style={{ fontFamily: 'Inter, sans-serif' }}
+              >
                 Find The Skills That Move Your Career Forward
               </h2>
             </div>

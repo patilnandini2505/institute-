@@ -49,12 +49,10 @@ export default function InstructorsSection() {
             </div>
             
             <h2 
-              className="text-black mb-6"
+              className="text-black mb-6 text-3xl md:text-[36px] leading-tight"
               style={{
                 fontFamily: 'Inter, sans-serif',
                 fontWeight: 700,
-                fontSize: '36px',
-                lineHeight: '100%',
                 letterSpacing: '0%',
               }}
             >

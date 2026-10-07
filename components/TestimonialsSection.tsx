@@ -51,16 +51,15 @@ export default function TestimonialsSection() {
             TESTIMONIALS
           </div>
           <h2 
-            className="text-black"
+            className="text-black text-3xl md:text-[36px] leading-tight"
             style={{
               fontFamily: 'Inter, sans-serif',
               fontWeight: 700,
-              fontSize: '36px',
-              lineHeight: '100%',
               letterSpacing: '0%',
             }}
           >
-            Don't Just Take Our Word For It.
+            <span className="block sm:inline">Don't Just Take </span>
+            <span className="block sm:inline">Our Word For It.</span>
           </h2>
         </div>
 

@@ -31,7 +31,7 @@ const cards = [
 export default function WhereHeaded() {
   return (
     <section
-      className="w-full relative pb-20 pt-12 bg-no-repeat bg-cover bg-center"
+      className="w-full relative pb-16 md:pb-20 pt-8 md:pt-12 bg-no-repeat bg-cover bg-center"
       style={{
         backgroundImage: "url('/zb2.jpeg')",
       }}
@@ -47,7 +47,10 @@ export default function WhereHeaded() {
           >
             FIND YOUR PATH
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#111]">
+          <h2 
+            className="text-3xl md:text-4xl font-bold text-[#111] leading-tight"
+            style={{ fontFamily: 'Inter, sans-serif' }}
+          >
             Where are you <span className="text-[#6419e6]">Headed?</span>
           </h2>
         </div>

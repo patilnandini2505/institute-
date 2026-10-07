@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="w-full bg-[#f4f2ff] pt-12">
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12 pb-16">
         <div 
-          className="rounded-[24px] p-10 md:p-14 flex flex-col lg:flex-row justify-between gap-12 items-center bg-no-repeat bg-cover bg-center overflow-hidden shadow-sm"
+          className="rounded-[24px] p-6 md:p-14 flex flex-col lg:flex-row justify-between gap-12 items-center bg-no-repeat bg-cover bg-center overflow-hidden shadow-sm"
           style={{ 
             backgroundImage: "url('/WhatsApp%20Image%202026-10-01%20at%204.28.39%20PM.jpeg')",
           }}
@@ -19,17 +19,15 @@ export default function Footer() {
               TAKE THE NEXT STEP
             </div>
             <h2 
-              className="text-black mb-4"
+              className="text-black mb-4 text-3xl md:text-[36px] leading-tight"
               style={{
                 fontFamily: 'Inter, sans-serif',
                 fontWeight: 700,
-                fontSize: '36px',
-                lineHeight: '100%',
                 letterSpacing: '0%',
               }}
             >
-              Take The First Step <br className="hidden md:block" />
-              Towards Your <span className="text-[#6419e6]">Dream Career.</span>
+              <span className="block sm:inline">Take The First Step </span>
+              <span className="block sm:inline">Towards Your <span className="text-[#6419e6]">Dream Career.</span></span>
             </h2>
             <p className="text-gray-700 text-sm md:text-base mb-10 max-w-md leading-relaxed font-medium">
               Leave your details and our team will help you choose the right program for your career goals.

@@ -55,10 +55,9 @@ export default function Hero() {
           </div>
 
           <h1
-            className="w-full text-[#111] font-bold"
+            className="w-full text-[#111] font-bold text-3xl sm:text-4xl lg:text-[48px]"
             style={{
               fontFamily: 'Inter, sans-serif',
-              fontSize: 'clamp(32px, 4vw, 48px)',
               lineHeight: '1.2',
               letterSpacing: '0%'
             }}
@@ -253,7 +252,7 @@ export default function Hero() {
       <div className="w-full h-24 md:h-36 bg-gradient-to-b from-transparent to-white relative z-20 pointer-events-none -mb-1 mt-4 md:mt-6" />
 
       {/* Companies Section */}
-      <div className="w-full flex flex-col items-center relative z-20 px-6 pt-6 pb-24 bg-white">
+      <div className="w-full flex flex-col items-start md:items-center relative z-20 px-6 pt-6 pb-14 md:pb-24 bg-white">
         <div
           className="border-[#bfb2ea] bg-[#eff8d8] inline-flex items-center justify-center text-[11px] font-medium text-black tracking-wide uppercase rounded-full shadow-sm whitespace-nowrap px-4 py-1.5 h-[33px] mb-6"
           style={{
@@ -264,11 +263,10 @@ export default function Hero() {
         </div>
 
         <h2
-          className="text-[#111] font-bold text-center mb-12"
+          className="text-[#111] font-bold text-left md:text-center mb-12 text-3xl md:text-[36px] leading-tight"
           style={{
             fontFamily: 'Inter, sans-serif',
-            fontSize: 'clamp(24px, 3vw, 36px)',
-            lineHeight: '1.2'
+            letterSpacing: '0%'
           }}
         >
           Our Learners Are Building Careers At Leading Companies

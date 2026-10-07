@@ -2,16 +2,26 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (isSearchOpen && inputRef.current) {
       inputRef.current.focus();
     }
   }, [isSearchOpen]);
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    setIsSearchOpen(false);
+    if (pathname === '/' || pathname === '') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/70 backdrop-blur-md border-b border-black/[0.08] shadow-[0_10px_30px_rgba(0,0,0,0.1),0_2px_8px_rgba(0,0,0,0.06)] z-50 transition-all">
@@ -20,8 +30,8 @@ export default function Navbar() {
         <div className="hidden md:flex h-[92px] items-center justify-between gap-4 py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/">
-              <img src="/Group%202.svg" alt="Zikrabyte Logo" className="w-[150px] md:w-[187.48px] h-auto object-contain" />
+            <Link href="/" onClick={handleLogoClick} className="block cursor-pointer">
+              <img src="/Group%202.svg" alt="Zikrabyte Logo" className="w-[150px] md:w-[187.48px] h-auto object-contain cursor-pointer" />
             </Link>
           </div>
 
@@ -56,8 +66,8 @@ export default function Navbar() {
         <div className="flex md:hidden flex-col pt-3 pb-3 gap-2.5">
           {/* Top Row: Logo, Search Icon, and Action Button */}
           <div className="flex items-center justify-between w-full">
-            <Link href="/" className="flex-shrink-0">
-              <img src="/Group%202.svg" alt="Zikrabyte Logo" className="w-[120px] sm:w-[140px] h-auto object-contain" />
+            <Link href="/" onClick={handleLogoClick} className="flex-shrink-0 block cursor-pointer">
+              <img src="/Group%202.svg" alt="Zikrabyte Logo" className="w-[120px] sm:w-[140px] h-auto object-contain cursor-pointer" />
             </Link>
 
             <div className="flex items-center gap-2">
@@ -92,15 +102,15 @@ export default function Navbar() {
 
           {/* Collapsible Mobile Search Bar */}
           {isSearchOpen && (
-            <div className="w-full pt-1 animate-fadeIn">
-              <div className="w-full h-[46px] py-1 pr-1.5 pl-4 rounded-[40px] border border-gray-300 bg-white flex items-center justify-between shadow-sm focus-within:border-[#7b2ff7] focus-within:ring-1 focus-within:ring-[#7b2ff7] transition-all">
+            <div className="w-full flex justify-center pt-1 px-1 animate-fadeIn">
+              <div className="w-full max-w-[350px] sm:max-w-[400px] h-[42px] py-1 pr-1.5 pl-4 rounded-full border border-gray-300 bg-white flex items-center justify-between shadow-sm focus-within:border-[#7b2ff7] focus-within:ring-1 focus-within:ring-[#7b2ff7] transition-all">
                 <input 
                   ref={inputRef}
                   type="text" 
                   placeholder="What do you want to learn?" 
-                  className="w-full h-full bg-transparent outline-none font-medium text-[13px] text-gray-700 placeholder-gray-400"
+                  className="w-full min-w-0 flex-1 h-full bg-transparent outline-none font-medium text-[13px] text-gray-700 placeholder-gray-400"
                 />
-                <button className="w-[34px] h-[34px] shrink-0 bg-radial-brand rounded-full flex items-center justify-center text-white hover:brightness-110 transition-all shadow-sm">
+                <button className="w-[32px] h-[32px] shrink-0 bg-radial-brand rounded-full flex items-center justify-center text-white hover:brightness-110 transition-all shadow-sm">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                   </svg>
