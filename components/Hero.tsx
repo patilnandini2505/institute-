@@ -118,7 +118,7 @@ export default function Hero() {
         </div>
 
         {/* Right Graphic Area */}
-        <div className="w-full lg:w-[50%] flex justify-center lg:justify-end relative mt-2 sm:mt-6 lg:mt-0 shrink-0">
+        <div className="w-full lg:w-[50%] flex justify-center lg:justify-end relative mt-6 lg:mt-0 shrink-0">
           <style>{`
             @keyframes float-icon {
               0%, 100% { transform: translate(-50%, -50%) translateY(0); }
