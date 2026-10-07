@@ -42,7 +42,7 @@ export default function Hero() {
         }}
       ></div>
 
-      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-20 mt-[120px]">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-20 mt-[95px] sm:mt-[110px] md:mt-[120px]">
         {/* Left Content */}
         <div className="flex flex-col items-start text-left space-y-5 w-full lg:w-auto shrink-0 z-20">
           <div
@@ -81,32 +81,28 @@ export default function Hero() {
           </p>
 
           <div
-            className="grid text-[#4B5563] py-2"
+            className="flex flex-col sm:grid sm:[grid-template-columns:max-content_max-content] text-[#4B5563] py-2 gap-3 sm:gap-x-5 sm:gap-y-3"
             style={{
-              gridTemplateColumns: 'max-content max-content',
-              columnGap: '20px',
-              rowGap: '12px',
               fontFamily: 'Inter, sans-serif',
               fontWeight: 400,
               fontSize: '14px',
-              lineHeight: '100%',
               letterSpacing: '0%'
             }}
           >
-            <div className="flex items-center space-x-2.5 whitespace-nowrap">
-              <div className="w-2 h-2 rounded-full bg-[#6419e6]"></div>
+            <div className="flex items-center space-x-2.5">
+              <div className="w-2 h-2 rounded-full bg-[#6419e6] shrink-0"></div>
               <span>Build 5+ real-world projects</span>
             </div>
-            <div className="flex items-center space-x-2.5 whitespace-nowrap">
-              <div className="w-2 h-2 rounded-full bg-[#6419e6]"></div>
+            <div className="flex items-center space-x-2.5">
+              <div className="w-2 h-2 rounded-full bg-[#6419e6] shrink-0"></div>
               <span>Live coding & hands-on practice</span>
             </div>
-            <div className="flex items-center space-x-2.5 whitespace-nowrap">
-              <div className="w-2 h-2 rounded-full bg-[#6419e6]"></div>
+            <div className="flex items-center space-x-2.5">
+              <div className="w-2 h-2 rounded-full bg-[#6419e6] shrink-0"></div>
               <span>Master Frontend + Backend Development</span>
             </div>
-            <div className="flex items-center space-x-2.5 whitespace-nowrap">
-              <div className="w-2 h-2 rounded-full bg-[#6419e6]"></div>
+            <div className="flex items-center space-x-2.5">
+              <div className="w-2 h-2 rounded-full bg-[#6419e6] shrink-0"></div>
               <span>Career guidance & placement support</span>
             </div>
           </div>
@@ -122,7 +118,7 @@ export default function Hero() {
         </div>
 
         {/* Right Graphic Area */}
-        <div className="w-full lg:w-[50%] flex justify-center lg:justify-end relative mt-16 lg:mt-0 shrink-0">
+        <div className="w-full lg:w-[50%] flex justify-center lg:justify-end relative mt-2 sm:mt-6 lg:mt-0 shrink-0">
           <style>{`
             @keyframes float-icon {
               0%, 100% { transform: translate(-50%, -50%) translateY(0); }

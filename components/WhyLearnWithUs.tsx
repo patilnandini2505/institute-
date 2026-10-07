@@ -10,8 +10,7 @@ export default function WhyLearnWithUs() {
           
           {/* Left Purple Card */}
           <div 
-            className="bg-[#9b83e8] p-6 flex flex-col flex-shrink-0 shadow-sm overflow-hidden"
-            style={{ width: '100%', maxWidth: '400px', borderRadius: '24px' }}
+            className="bg-[#9b83e8] p-6 flex flex-col flex-shrink-0 shadow-sm overflow-hidden rounded-[24px] w-full lg:max-w-[400px]"
           >
             <div>
               <div 
@@ -49,10 +48,10 @@ export default function WhyLearnWithUs() {
           <div className="w-full flex-1 flex flex-col gap-4">
             
             {/* Top Row */}
-            <div className="flex flex-col sm:flex-row gap-4 w-full h-[158px]">
+            <div className="flex flex-col sm:flex-row gap-4 w-full h-auto sm:min-h-[158px] lg:h-[158px]">
               
               {/* Card 1 (Narrower) */}
-              <div className="bg-white rounded-[24px] p-6 flex flex-col justify-center border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] sm:w-[44%] h-full">
+              <div className="bg-white rounded-[24px] p-6 flex flex-col justify-center border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] w-full sm:w-[44%] h-auto sm:h-full">
                 <h3 className="text-[17px] font-bold text-[#111] mb-2 leading-snug">Learn by Doing</h3>
                 <p className="text-gray-500 text-sm leading-relaxed m-0">
                   Work on real-world projects and practical tasks, not just theory.
@@ -60,7 +59,7 @@ export default function WhyLearnWithUs() {
               </div>
 
               {/* Card 2 (Wider) */}
-              <div className="bg-white rounded-[24px] p-6 flex flex-col justify-center border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] sm:w-[56%] h-full">
+              <div className="bg-white rounded-[24px] p-6 flex flex-col justify-center border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] w-full sm:w-[56%] h-auto sm:h-full">
                 <h3 className="text-[17px] font-bold text-[#111] mb-2 leading-snug">Learn from Industry Experts</h3>
                 <p className="text-gray-500 text-sm leading-relaxed m-0">
                   Get guidance from experienced professionals who understand the industry.
@@ -69,10 +68,10 @@ export default function WhyLearnWithUs() {
             </div>
 
             {/* Bottom Row */}
-            <div className="flex flex-col sm:flex-row gap-4 w-full h-[158px]">
+            <div className="flex flex-col sm:flex-row gap-4 w-full h-auto sm:min-h-[158px] lg:h-[158px]">
               
               {/* Card 3 (Wider) */}
-              <div className="bg-white rounded-[24px] p-6 flex flex-col justify-center border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] sm:w-[56%] h-full">
+              <div className="bg-white rounded-[24px] p-6 flex flex-col justify-center border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] w-full sm:w-[56%] h-auto sm:h-full">
                 <h3 className="text-[17px] font-bold text-[#111] mb-2 leading-snug">Build Career-Ready Skills</h3>
                 <p className="text-gray-500 text-sm leading-relaxed m-0">
                   Develop the technical, professional, and problem-solving skills employers look for.
@@ -80,7 +79,7 @@ export default function WhyLearnWithUs() {
               </div>
 
               {/* Card 4 (Narrower) */}
-              <div className="bg-white rounded-[24px] p-6 flex flex-col justify-center border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] sm:w-[44%] h-full">
+              <div className="bg-white rounded-[24px] p-6 flex flex-col justify-center border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] w-full sm:w-[44%] h-auto sm:h-full">
                 <h3 className="text-[17px] font-bold text-[#111] mb-2 leading-snug">Get Support Beyond the Classroom</h3>
                 <p className="text-gray-500 text-sm leading-relaxed m-0">
                   Get guidance from learning to job search.
