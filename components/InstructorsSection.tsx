@@ -49,18 +49,31 @@ export default function InstructorsSection() {
             </div>
             
             <h2 
-              className="text-black mb-6"
+              className="text-black mb-6 text-[25px] sm:text-[30px] md:text-[36px] leading-[1.2] md:leading-[1.15]"
               style={{
                 fontFamily: 'Inter, sans-serif',
                 fontWeight: 700,
-                fontSize: '36px',
-                lineHeight: '100%',
                 letterSpacing: '0%',
               }}
             >
-              <span className="whitespace-nowrap">Real <span className="text-[#6C5CE7]">Experience.</span> Practical</span>
-              <br />
-              <span className="text-[#6C5CE7]">Guidance.</span>
+              {/* Mobile View: each in its own single line */}
+              <span className="block md:hidden">
+                <span className="block whitespace-nowrap">
+                  Real <span className="text-[#6C5CE7]">Experience.</span>
+                </span>
+                <span className="block whitespace-nowrap">
+                  Practical <span className="text-[#6C5CE7]">Guidance.</span>
+                </span>
+              </span>
+
+              {/* Desktop View (>= md) */}
+              <span className="hidden md:inline">
+                <span className="whitespace-nowrap">
+                  Real <span className="text-[#6C5CE7]">Experience.</span> Practical
+                </span>
+                <br />
+                <span className="text-[#6C5CE7]">Guidance.</span>
+              </span>
             </h2>
             
             <p className="text-gray-600 text-[15px] md:text-[17px] leading-relaxed max-w-[500px] font-medium">
